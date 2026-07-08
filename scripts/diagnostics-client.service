@@ -1,0 +1,16 @@
+[Unit]
+Description=MALS Diagnostics Client
+After=graphical.target
+Wants=graphical.target
+
+[Service]
+Type=simple
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/tehnoprog/.Xauthority
+ExecStart=/usr/bin/chromium --kiosk /home/tehnoprog/projects/diagnostics/diagnostics-client/index.html
+Restart=always
+RestartSec=5
+StandardOutput=journal
+
+[Install]
+WantedBy=default.target

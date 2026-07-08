@@ -1,0 +1,354 @@
+/* Конфигурация для диагностических сигналов
+/* шкафов МАЛС   
+*/
+[
+    {
+        "id": "metric1",
+        "title": "Дверь передняя",
+        "type": "door",
+        "unit": "",
+        "defaultVal": "--",
+        "normal_level": "закрыта",      // норма
+        "warning_criterion": "=",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "открыта",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "",    // число (% отклонения от нормы), значение или пустая строка   
+        "source": {"name":"door", "type":"mock","params":{"mode":"series", "series":["открыта","закрыта"]}},       
+    },
+    {
+        "id": "metric2",
+        "title": "Дверь задняя",
+        "type": "door",
+        "unit": "",
+        "defaultVal": "--",
+        "normal_level": "закрыта",      // норма
+        "warning_criterion": "=",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "открыта",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "",    // число (% отклонения от нормы), значение или пустая строка             
+        "source": {"name":"door", "type":"mock","params":{"mode":"series", "series":["открыта","закрыта"]}},      
+    },    
+    {
+        "id": "metric3",
+        "title": "Автомат QF1",
+        "type": "automat",
+        "unit": "",
+        "defaultVal": "--",
+        "normal_level": "вкл",      // норма
+        "warning_criterion": "",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка         
+        "source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},          
+    },     
+    {
+        "id": "metric4",
+        "title": "Автомат QF2",
+        "type": "automat",
+        "unit": "",
+        "defaultVal": "--",
+        "normal_level": "вкл",      // норма
+        "warning_criterion": "",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка              
+        "source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},               
+    },         
+    {
+        "id": "metric5",
+        "title": "Автомат QF3",
+        "type": "automat",
+        "unit": "",
+        "defaultVal": "--",
+        "normal_level": "вкл",      // норма
+        "warning_criterion": "",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка              
+        "source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},            
+    },         
+    {
+        "id": "metric6",
+        "title": "Автомат QF4",
+        "type": "automat",
+        "unit": "",
+        "defaultVal": "--",
+        "normal_level": "вкл",      // норма
+        "warning_criterion": "",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка              
+        "source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},                 
+    },
+    {
+        "id": "metric7",
+        "title": "Источник U1",
+        "type": "power",
+        "unit": "",
+        "defaultVal": "--",
+        "normal_level": "вкл",      // норма
+        "warning_criterion": "",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка              
+        "source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},                
+    },       
+    {
+        "id": "metric8",
+        "title": "Источник U2",
+        "type": "power",
+        "unit": "",
+        "defaultVal": "--",
+        "normal_level": "вкл",      // норма
+        "warning_criterion": "",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка         
+        "source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},        
+    },            
+    {
+        "id": "metric9",
+        "title": "Источник U3",
+        "type": "power",
+        "unit": "",
+        "defaultVal": "--",
+        "normal_level": "вкл",      // норма
+        "warning_criterion": "",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка          
+        "source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},           
+    },  
+    {
+        "id": "metric10",
+        "title": "Источник U4",
+        "type": "power",
+        "unit": "",
+        "defaultVal": "--",
+        "normal_level": "вкл",      // норма
+        "warning_criterion": "",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка          
+        "source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},       
+    },      
+    {
+        "id": "metric11",            // идентификатор
+        "title": "Напряжение U1",   // описание
+        "type": "voltage DC",          // тип  (voltage, current, door, automat) 
+        "unit": "В",                // единица измерения 
+        "defaultVal": "--",         // значение по умолчанию
+        "normal_level": "24",      // норма
+        "warning_criterion": "%",    // критерий: ">", "<", "=", "!=", "%", "" 
+        "warning_threshold": "10",  // число, текстовое значение или пустая строка 
+        "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""         
+        "alarm_threshold": "20",    // число, текстовое значение или пустая строка           
+        "source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}},  
+    },
+    {
+        "id": "metric12",            // идентификатор
+        "title": "Напряжение U2",   // описание
+        "type": "voltage DC",          // тип  (voltage, current, door, automat) 
+        "unit": "В",                // единица измерения 
+        "defaultVal": "--",         // значение по умолчанию
+        "normal_level": "24",      // норма
+        "warning_criterion": "%",    // критерий: ">", "<", "=", "!=", "%", "" 
+        "warning_threshold": "10",  // число, текстовое значение или пустая строка 
+        "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""         
+        "alarm_threshold": "20",    // число, текстовое значение или пустая строка            
+        "source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}}, 
+    },    
+    {
+        "id": "metric13",            // идентификатор
+        "title": "Напряжение U3",   // описание
+        "type": "voltage DC",          // тип  (voltage, current, door, automat) 
+        "unit": "В",                // единица измерения 
+        "defaultVal": "--",         // значение по умолчанию
+        "normal_level": "24",      // норма
+        "warning_criterion": "%",    // критерий: ">", "<", "=", "!=", "%", "" 
+        "warning_threshold": "10",  // число, текстовое значение или пустая строка 
+        "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""         
+        "alarm_threshold": "20",    // число, текстовое значение или пустая строка            
+        "source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}}, 
+    },    
+    {
+        "id": "metric14",            // идентификатор
+        "title": "Напряжение U4",   // описание
+        "type": "voltage DC",          // тип  (voltage, current, door, automat) 
+        "unit": "В",                // единица измерения 
+        "defaultVal": "--",         // значение по умолчанию
+        "normal_level": "24",      // норма
+        "warning_criterion": "%",    // критерий: ">", "<", "=", "!=", "%", "" 
+        "warning_threshold": "10",  // число, текстовое значение или пустая строка 
+        "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""         
+        "alarm_threshold": "20",    // число, текстовое значение или пустая строка            
+        "source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}}, 
+    },    
+    {
+        "id": "metric15",
+        "title": "Напряжение ~ 1",
+        "type": "voltage AC",
+        "unit": "В",
+        "defaultVal": "--",
+        "normal_level": "220",      // норма
+        "warning_criterion": "%",    // критерий: ">", "<", "=", "!=", "%", ""                 
+        "warning_threshold": "10",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "20",    // число (% отклонения от нормы), значение или пустая строка    
+        "source": {"name":"voltage_220_1", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"voltage"}},   
+
+    },    
+    {
+        "id": "metric16",
+        "title": "Ток ~ 1",
+        "type": "current AC",
+        "unit": "A",
+        "defaultVal": "--",
+        "normal_level": "",      // норма
+        "warning_criterion": ">",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": ">",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка    
+        "source": {"name":"current_220_1", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"current"}},        
+
+    },
+    {
+        "id": "metric17",
+        "title": "Частота ~ 1",
+        "type": "frequency",
+        "unit": "Гц",
+        "defaultVal": "--",
+        "normal_level": "50",      // норма
+        "warning_criterion": "%",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка    
+        "source": {"name":"frequency_220_1", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"frequency"}},      
+
+    },    
+    {
+        "id": "metric18",
+        "title": "Напряжение ~ 2",
+        "type": "voltage AC",
+        "unit": "В",
+        "defaultVal": "--",
+        "normal_level": "220",      // норма
+        "warning_criterion": "%",    // критерий: ">", "<", "=", "!=", "%", ""                 
+        "warning_threshold": "10",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "20",    // число (% отклонения от нормы), значение или пустая строка        
+        "source": {"name":"voltage_220_2", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"voltage"}},   
+ 
+    },    
+    {
+        "id": "metric19",
+        "title": "Ток ~ 2",
+        "type": "current AC",
+        "unit": "A",
+        "defaultVal": "--",
+        "normal_level": "8",      // норма
+        "warning_criterion": ">",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": ">",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка      
+        "source": {"name":"current_220_2", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"current"}},           
+    },    
+    {
+        "id": "metric20",
+        "title": "Частота ~ 2",
+        "type": "frequency",
+        "unit": "Гц",
+        "defaultVal": "--",
+        "normal_level": "50",      // норма
+        "warning_criterion": "%",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка    
+        "source": {"name":"frequency_220_2", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"frequency"}},    
+
+    },      
+    {
+        "id": "metric21",
+        "title": "Напряжение ~ 3",
+        "type": "voltage AC",
+        "unit": "В",
+        "defaultVal": "--",
+        "normal_level": "220",      // норма
+        "warning_criterion": "%",    // критерий: ">", "<", "=", "!=", "%", ""                 
+        "warning_threshold": "10",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "20",    // число (% отклонения от нормы), значение или пустая строка         
+        "source": {"name":"voltage_220_3", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"voltage"}},   
+         
+    },    
+    {
+        "id": "metric22",
+        "title": "Ток ~ 3",
+        "type": "current AC",
+        "unit": "A",
+        "defaultVal": "--",
+        "normal_level": "8",      // норма
+        "warning_criterion": ">",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": ">",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка         
+        "source": {"name":"current_220_3", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"current"}}, 
+    },
+    {
+        "id": "metric23",
+        "title": "Частота ~ 3",
+        "type": "frequency",
+        "unit": "Гц",
+        "defaultVal": "--",
+        "normal_level": "50",      // норма
+        "warning_criterion": "%",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка         
+        "source": {"name":"frequency_220_3", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"frequency"}}, 
+
+    },      
+    {
+        "id": "metric24",
+        "title": "Напряжение ~ 4",
+        "type": "voltage AC",
+        "unit": "В",
+        "defaultVal": "--",
+        "normal_level": "220",      // норма
+        "warning_criterion": "%",    // критерий: ">", "<", "=", "!=", "%", ""                 
+        "warning_threshold": "10",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "20",    // число (% отклонения от нормы), значение или пустая строка        
+        "source": {"name":"voltage_220_1", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"voltage"}},    
+
+    },    
+    {
+        "id": "metric25",
+        "title": "Ток ~ 4",
+        "type": "current AC",
+        "unit": "A",
+        "defaultVal": "--",
+        "normal_level": "8",      // норма
+        "warning_criterion": ">",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": ">",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка         
+        "source": {"name":"current_220_4", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"current"}}, 
+    },
+    {
+        "id": "metric26",
+        "title": "Частота ~ 4",
+        "type": "frequency",
+        "unit": "Гц",
+        "defaultVal": "--",
+        "normal_level": "50",      // норма
+        "warning_criterion": "%",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
+        "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка         
+        "source": {"name":"frequency_220_4", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"frequency"}}, 
+
+    }            
+
+]
+/**/
