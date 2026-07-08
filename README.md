@@ -10,10 +10,10 @@ sudo apt install mc nano nginx chromium
 cd /home/tehnoprog
 mkdir projects
 cd projects
-git clone github.com/lepikhov/diagnostics
+git clone github.com/lepikhov/diagnostics.git
 cd diagnostics
-git clone github.com/lepikhov/diagnostics-client
-git clone github.com/lepikhov/diagnostics-service
+git clone github.com/lepikhov/diagnostics-client.git
+git clone github.com/lepikhov/diagnostics-service.git
 ```
 
 ## 2. Настройки параметров для каждой диагностируемой метрики 
