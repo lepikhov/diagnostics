@@ -59,6 +59,7 @@ chromium --kiosk /home/tehnoprog/projects/diagnostics/diagnostics-client/index.h
 ### 4.3. Запуск сервиса
 ```bash
 sudo cp /home/tehnoprog/projects/diagnostics/scripts/diagnostics-client.service /etc/systemd/user/
+sudo systemctl daemon-reload
 systemctl --user start diagnostics-client.service
 systemctl --user enable diagnostics-client.service
 systemctl --user status diagnostics-client.service
@@ -101,6 +102,7 @@ deactivate
 sudo cp /home/tehnoprog/projects/diagnostics/scripts/diagnostics-service.service /etc/systemd/system/
 sudo mkdir /gunicorn
 sudo chown tehnoprog:www-data /gunicorn
+sudo systemctl daemon-reload
 sudo systemctl start diagnostics-service
 sudo systemctl status diagnostics-service
 sudo systemctl enable diagnostics-service

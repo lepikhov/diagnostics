@@ -6,6 +6,6 @@ User=tehnoprog
 Group=www-data
 WorkingDirectory=/home/tehnoprog/projects/diagnostics/diagnostics-service
 Environment="PATH=/home/tehnoprog/projects/diagnostics/diagnostics-service/venv/bin"
-ExecStart=/home/tehnoprog/projects/diagnostics/diagnostics-service/venv/bin/gunicorn --workers 3 --bind unix:diagnostics-service.sock -m 007 wsgi:app
+ExecStart=/home/tehnoprog/projects/diagnostics/diagnostics-service/venv/bin/gunicorn --preload --workers 3 --bind unix:/gunicorn/diagnostics-service.sock wsgi:app
 [Install]
 WantedBy=multi-user.target
