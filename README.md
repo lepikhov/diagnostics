@@ -2,18 +2,18 @@
 
 ## 1. Базовые установки
 
-Предполагается, что на диагностическом компьютере установлен ***AstraLinux***, создан пользователь ***tehnoprog***, установлен ***git*** и сделаны сетевые настройки в соответствии с проектом для шкафа МАЛС. На компьютер осуществлён вход под ***tehnoprog***
+Предполагается, что на диагностическом компьютере установлен ***AstraLinux***, создан пользователь ***tehnoprog***  и сделаны сетевые настройки в соответствии с проектом для шкафа МАЛС. На компьютер осуществлён вход под ***tehnoprog***
 
 ```bash
 sudo apt update
-sudo apt install mc nano nginx chromium
+sudo apt install git mc nano nginx chromium
 cd /home/tehnoprog
 mkdir projects
 cd projects
-git clone github.com/lepikhov/diagnostics.git
+git clone https://github.com/lepikhov/diagnostics.git
 cd diagnostics
-git clone github.com/lepikhov/diagnostics-client.git
-git clone github.com/lepikhov/diagnostics-service.git
+git clone https://github.com/lepikhov/diagnostics-client.git
+git clone https://github.com/lepikhov/diagnostics-service.git
 ```
 
 ## 2. Настройки параметров для каждой диагностируемой метрики 
@@ -71,12 +71,17 @@ cd ./diagnostics-service
 ```
 ### 5.1. Установка python
 ```bash
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt update
-sudo apt install python3.14
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.14 1
+wget https://www.python.org/ftp/python/3.14.6/Python-3.14.6.tgz
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl
+tar -xzf Python-3.14.6.tgz
+cd ./Python-3.14.6
+./configure
+make -j$(nproc)
+sudo make altinstall
 python3.14 --version
-sudo update-alternatives --config python3
+cd ..
+rm ./Python-3.14.6.tgz
+sudo rm -fr Python-3.14.6 
 ```
 ### 5.2. Создание виртуального окружения и установка зависимостей
 ```bash
@@ -114,7 +119,7 @@ nano /home/tehnoprog/projects/diagnostics/scripts/dianostics-service
 ```
 
 ```bash
-sudo cp /home/tehnoprog/projects/diagnostics/scripts/dianostics-service /etc/nginx/sites-available/
+sudo cp /home/tehnoprog/projects/diagnostics/scripts/diagnostics-service /etc/nginx/sites-available/
 sudo ln -s /etc/nginx/sites-available/diagnostics-service /etc/nginx/sites-enabled
 sudo nginx -t
 sudo nginx -s reload

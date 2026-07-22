@@ -13,7 +13,9 @@
         "warning_threshold": "открыта",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "",    // число (% отклонения от нормы), значение или пустая строка   
-        "source": {"name":"door", "type":"mock","params":{"mode":"series", "series":["открыта","закрыта"]}},       
+        //"source": {"name":"door", "type":"mock","params":{"mode":"series", "series":["открыта","закрыта"]}},       
+        "source": {"name":"front_door", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "0", 
+        "0":"открыта","1":"закрыта"}},   
     },
     {
         "id": "metric2",
@@ -26,7 +28,9 @@
         "warning_threshold": "открыта",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "",    // число (% отклонения от нормы), значение или пустая строка             
-        "source": {"name":"door", "type":"mock","params":{"mode":"series", "series":["открыта","закрыта"]}},      
+        //"source": {"name":"door", "type":"mock","params":{"mode":"series", "series":["открыта","закрыта"]}},      
+        "source": {"name":"back_door", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "1", 
+        "0":"открыта","1":"закрыта"}},           
     },    
     {
         "id": "metric3",
@@ -39,7 +43,9 @@
         "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка         
-        "source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},          
+        //"source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},          
+        "source": {"name":"QF1", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "2", 
+        "0":"выкл","1":"вкл"}},                   
     },     
     {
         "id": "metric4",
@@ -52,7 +58,9 @@
         "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка              
-        "source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},               
+        //"source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},               
+        "source": {"name":"QF2", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "3", 
+        "0":"выкл","1":"вкл"}}, 
     },         
     {
         "id": "metric5",
@@ -65,7 +73,9 @@
         "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка              
-        "source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},            
+        //"source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},            
+        "source": {"name":"QF3", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "4", 
+        "0":"выкл","1":"вкл"}}, 
     },         
     {
         "id": "metric6",
@@ -78,7 +88,9 @@
         "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка              
-        "source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},                 
+        //"source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},                 
+        "source": {"name":"QF4", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "5", 
+        "0":"выкл","1":"вкл"}}, 
     },
     {
         "id": "metric7",
@@ -91,7 +103,9 @@
         "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка              
-        "source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},                
+        //"source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},                
+        "source": {"name":"U1-ok", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "6", 
+        "0":"выкл","1":"вкл"}}, 
     },       
     {
         "id": "metric8",
@@ -104,7 +118,9 @@
         "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка         
-        "source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},        
+        //"source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},        
+        "source": {"name":"U2-ok", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "7", 
+        "0":"выкл","1":"вкл"}}, 
     },            
     {
         "id": "metric9",
@@ -117,7 +133,9 @@
         "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка          
-        "source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},           
+        //"source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},           
+        "source": {"name":"U3-ok", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "8", 
+        "0":"выкл","1":"вкл"}}, 
     },  
     {
         "id": "metric10",
@@ -130,7 +148,10 @@
         "warning_threshold": "",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка          
-        "source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},       
+        //"source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},    
+        "source": {"name":"U4-ok", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "9", 
+        "0":"выкл","1":"вкл"}}, 
+
     },      
     {
         "id": "metric11",            // идентификатор
@@ -143,7 +164,10 @@
         "warning_threshold": "10",  // число, текстовое значение или пустая строка 
         "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""         
         "alarm_threshold": "20",    // число, текстовое значение или пустая строка           
-        "source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}},  
+        //"source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}},  
+        "source": {"name":"U1", "type":"ethercat","params":{"mode":"ECAT-2011H", "position":"1", 
+        "channel": "6", "scale":"4.0", "input_type": "1","range_val": "3", "filter_val": "0",
+          "enable_user_scale": "True", "gain": "65535"}},
     },
     {
         "id": "metric12",            // идентификатор
@@ -156,7 +180,10 @@
         "warning_threshold": "10",  // число, текстовое значение или пустая строка 
         "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""         
         "alarm_threshold": "20",    // число, текстовое значение или пустая строка            
-        "source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}}, 
+        //"source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}}, 
+        "source": {"name":"U2", "type":"ethercat","params":{"mode":"ECAT-2011H", "position":"1", 
+        "channel": "7", "scale":"4.0", "input_type": "1","range_val": "3", "filter_val": "0",
+          "enable_user_scale": "True", "gain": "65535"}},
     },    
     {
         "id": "metric13",            // идентификатор
@@ -169,7 +196,10 @@
         "warning_threshold": "10",  // число, текстовое значение или пустая строка 
         "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""         
         "alarm_threshold": "20",    // число, текстовое значение или пустая строка            
-        "source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}}, 
+        //"source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}}, 
+        "source": {"name":"U3", "type":"ethercat","params":{"mode":"ECAT-2011H", "position":"1", 
+        "channel": "8", "scale":"4.0", "input_type": "1","range_val": "3", "filter_val": "0",
+          "enable_user_scale": "True", "gain": "65535"}},
     },    
     {
         "id": "metric14",            // идентификатор
@@ -182,7 +212,10 @@
         "warning_threshold": "10",  // число, текстовое значение или пустая строка 
         "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""         
         "alarm_threshold": "20",    // число, текстовое значение или пустая строка            
-        "source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}}, 
+        //"source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}}, 
+        "source": {"name":"U4", "type":"ethercat","params":{"mode":"ECAT-2011H", "position":"1", 
+        "channel": "9", "scale":"4.0", "input_type": "1","range_val": "3", "filter_val": "0",
+          "enable_user_scale": "True", "gain": "65535"}},
     },    
     {
         "id": "metric15",

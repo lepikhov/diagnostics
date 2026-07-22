@@ -2,8 +2,8 @@
 Description=Gunicorn instance for MALS diagnostics service
 After=network.target
 [Service]
-User=tehnoprog
-Group=www-data
+User=root
+Group=root
 WorkingDirectory=/home/tehnoprog/projects/diagnostics/diagnostics-service
 Environment="PATH=/home/tehnoprog/projects/diagnostics/diagnostics-service/venv/bin"
 ExecStart=/home/tehnoprog/projects/diagnostics/diagnostics-service/venv/bin/gunicorn --preload --workers 3 --bind unix:/gunicorn/diagnostics-service.sock wsgi:app
