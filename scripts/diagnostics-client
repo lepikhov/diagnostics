@@ -1,0 +1,22 @@
+server {
+    listen 8000;
+    server_name _;  # или домен/IP
+
+    root /var/www/diagnostics-client;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;  # для SPA-приложений (маршрутизация на клиенте)
+        # Если приложение не SPA, можно просто: try_files $uri $uri/ =404;
+    }
+
+    # Дополнительная настройка для статики (кеширование, сжатие)
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # Включение gzip-сжатия (опционально)
+    gzip on;
+    gzip_types text/plain text/css application/javascript application/json;
+}
