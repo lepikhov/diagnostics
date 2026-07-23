@@ -1,7 +1,7 @@
 [Unit]
 Description=MALS Diagnostics Client
-After=graphical.target
-Wants=graphical.target
+After=graphical-session.target
+BindsTo=graphical-session.target
 
 [Service]
 Type=simple
@@ -13,4 +13,4 @@ RestartSec=5
 StandardOutput=journal
 
 [Install]
-WantedBy=default.target
+WantedBy=graphical-session.target

@@ -1,6 +1,8 @@
 [Unit]
 Description=Gunicorn instance for MALS diagnostics service
-After=network.target
+After=network.target mongod.service
+Wants=network.target mongod.service
+Requires=mongod.service
 [Service]
 User=root
 Group=root
