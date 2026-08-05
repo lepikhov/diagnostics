@@ -56,7 +56,22 @@ sudo systemctl status mongod
 ```bash
 chromium --kiosk /home/tehnoprog/projects/diagnostics/diagnostics-client/index.html
 ```
-### 4.3. Запуск сервиса
+
+### 4.3. Настройка доступа к ***diagnostics-client*** как к статическому сайту (по 8000 порту)
+```bash
+sudo cp /home/tehnoprog/projects/diagnostics/scripts/diagnostics-client /etc/nginx/sites-available/
+sudo ln -s /etc/nginx/sites-available/diagnostics-client /etc/nginx/sites-enabled/
+sudo mkdir -p /var/www/diagnostics-client 
+sudo sudo cp -r /home/tehnoprog/projects/diagnostics/diagnostics-client/* /var/www/diagnostics-client/ 
+sudo nano /var/www/diagnostics-client/js/settings.js
+sudo chmod 755 /var/www/diagnostics-client
+sudo chown -R www-data:www-data /var/www/diagnostics-client
+sudo nginx -t
+sudo systemctl reload nginx 
+sudo ufw allow 8000/tcp
+```
+
+### 4.4. Запуск сервиса
 ```bash
 sudo cp /home/tehnoprog/projects/diagnostics/scripts/diagnostics-client.service /etc/systemd/user/
 sudo systemctl daemon-reload
@@ -128,18 +143,7 @@ sudo ufw delete allow 5000
 sudo ufw allow 'Nginx Full'
 ```
 
-## 6. Опционально. Настройка доступа к ***diagnostics-client*** как к статическому сайту (по 8000 порту)
-```bash
-sudo cp /home/tehnoprog/projects/diagnostics/scripts/diagnostics-client /etc/nginx/sites-available/
-sudo ln -s /etc/nginx/sites-available/diagnostics-client /etc/nginx/sites-enabled/
-sudo mkdir -p /var/www/diagnostics-client 
-sudo sudo cp -r /home/tehnoprog/projects/diagnostics/diagnostics-client/* /var/www/diagnostics-client/ 
-sudo chmod 755 /var/www/diagnostics-client
-sudo chown -R www-data:www-data /var/www/diagnostics-client
-sudo nginx -t
-sudo systemctl reload nginx 
-sudo ufw allow 8000/tcp
-```
+
 
 
 
