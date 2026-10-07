@@ -14,7 +14,7 @@
         "alarm_criterion": "",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "",    // число (% отклонения от нормы), значение или пустая строка   
         //"source": {"name":"door", "type":"mock","params":{"mode":"series", "series":["открыта","закрыта"]}},       
-        "source": {"name":"front_door", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "0", 
+        "source": {"name":"front_door", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "1", 
         "0":"открыта","1":"закрыта"}},   
     },
     {
@@ -29,7 +29,7 @@
         "alarm_criterion": "",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "",    // число (% отклонения от нормы), значение или пустая строка             
         //"source": {"name":"door", "type":"mock","params":{"mode":"series", "series":["открыта","закрыта"]}},      
-        "source": {"name":"back_door", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "1", 
+        "source": {"name":"back_door", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "0", 
         "0":"открыта","1":"закрыта"}},           
     },    
     {
@@ -45,7 +45,7 @@
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка         
         //"source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},          
         "source": {"name":"QF1", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "2", 
-        "0":"выкл","1":"вкл"}},                   
+        "1":"выкл","0":"вкл"}},                   
     },     
     {
         "id": "metric4",
@@ -60,7 +60,7 @@
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка              
         //"source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},               
         "source": {"name":"QF2", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "3", 
-        "0":"выкл","1":"вкл"}}, 
+        "1":"выкл","0":"вкл"}}, 
     },         
     {
         "id": "metric5",
@@ -75,7 +75,7 @@
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка              
         //"source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},            
         "source": {"name":"QF3", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "4", 
-        "0":"выкл","1":"вкл"}}, 
+        "1":"выкл","0":"вкл"}}, 
     },         
     {
         "id": "metric6",
@@ -90,7 +90,7 @@
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка              
         //"source": {"name":"automat", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},                 
         "source": {"name":"QF4", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "5", 
-        "0":"выкл","1":"вкл"}}, 
+        "1":"выкл","0":"вкл"}}, 
     },
     {
         "id": "metric7",
@@ -104,7 +104,7 @@
         "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка              
         //"source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},                
-        "source": {"name":"U1-ok", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "6", 
+        "source": {"name":"U1-ok", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "8", 
         "0":"выкл","1":"вкл"}}, 
     },       
     {
@@ -119,7 +119,7 @@
         "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка         
         //"source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},        
-        "source": {"name":"U2-ok", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "7", 
+        "source": {"name":"U2-ok", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "9", 
         "0":"выкл","1":"вкл"}}, 
     },            
     {
@@ -134,7 +134,7 @@
         "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка          
         //"source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},           
-        "source": {"name":"U3-ok", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "8", 
+        "source": {"name":"U3-ok", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "10", 
         "0":"выкл","1":"вкл"}}, 
     },  
     {
@@ -149,7 +149,7 @@
         "alarm_criterion": "=",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "выкл",    // число (% отклонения от нормы), значение или пустая строка          
         //"source": {"name":"power source", "type":"mock","params":{"mode":"series", "series":["вкл","выкл"]}},    
-        "source": {"name":"U4-ok", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "9", 
+        "source": {"name":"U4-ok", "type":"ethercat", "params":{"mode":"ECAT-2053", "position":"0", "channel": "11", 
         "0":"выкл","1":"вкл"}}, 
 
     },      
@@ -166,7 +166,7 @@
         "alarm_threshold": "20",    // число, текстовое значение или пустая строка           
         //"source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}},  
         "source": {"name":"U1", "type":"ethercat","params":{"mode":"ECAT-2011H", "position":"1", 
-        "channel": "6", "scale":"4.0", "input_type": "1","range_val": "3", "filter_val": "0",
+        "channel": "4", "scale":"10.0", "input_type": "1","range_val": "3", "filter_val": "0",
           "enable_user_scale": "True", "gain": "65535"}},
     },
     {
@@ -182,7 +182,7 @@
         "alarm_threshold": "20",    // число, текстовое значение или пустая строка            
         //"source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}}, 
         "source": {"name":"U2", "type":"ethercat","params":{"mode":"ECAT-2011H", "position":"1", 
-        "channel": "7", "scale":"4.0", "input_type": "1","range_val": "3", "filter_val": "0",
+        "channel": "5", "scale":"10.0", "input_type": "1","range_val": "3", "filter_val": "0",
           "enable_user_scale": "True", "gain": "65535"}},
     },    
     {
@@ -198,7 +198,7 @@
         "alarm_threshold": "20",    // число, текстовое значение или пустая строка            
         //"source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}}, 
         "source": {"name":"U3", "type":"ethercat","params":{"mode":"ECAT-2011H", "position":"1", 
-        "channel": "8", "scale":"4.0", "input_type": "1","range_val": "3", "filter_val": "0",
+        "channel": "6", "scale":"10.0", "input_type": "1","range_val": "3", "filter_val": "0",
           "enable_user_scale": "True", "gain": "65535"}},
     },    
     {
@@ -214,12 +214,12 @@
         "alarm_threshold": "20",    // число, текстовое значение или пустая строка            
         //"source": {"name":"24 V", "type":"mock","params":{"mode":"value", "mean":"24", "disp":"4"}}, 
         "source": {"name":"U4", "type":"ethercat","params":{"mode":"ECAT-2011H", "position":"1", 
-        "channel": "9", "scale":"4.0", "input_type": "1","range_val": "3", "filter_val": "0",
+        "channel": "7", "scale":"10.0", "input_type": "1","range_val": "3", "filter_val": "0",
           "enable_user_scale": "True", "gain": "65535"}},
     },    
     {
         "id": "metric15",
-        "title": "Напряжение ~ 1",
+        "title": "ИБП1 вход. напр.",
         "type": "voltage AC",
         "unit": "В",
         "defaultVal": "--",
@@ -230,10 +230,11 @@
         "alarm_threshold": "20",    // число (% отклонения от нормы), значение или пустая строка    
         "source": {"name":"voltage_220_1", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"voltage"}},   
 
-    },    
+    },
+    
     {
         "id": "metric16",
-        "title": "Ток ~ 1",
+        "title": "ИБП1 вход. ток",
         "type": "current AC",
         "unit": "A",
         "defaultVal": "--",
@@ -247,7 +248,7 @@
     },
     {
         "id": "metric17",
-        "title": "Частота ~ 1",
+        "title": "ИБП1 вход. част.",
         "type": "frequency",
         "unit": "Гц",
         "defaultVal": "--",
@@ -261,7 +262,7 @@
     },    
     {
         "id": "metric18",
-        "title": "Напряжение ~ 2",
+        "title": "ИБП2 вход. напр.",
         "type": "voltage AC",
         "unit": "В",
         "defaultVal": "--",
@@ -270,25 +271,25 @@
         "warning_threshold": "10",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "20",    // число (% отклонения от нормы), значение или пустая строка        
-        "source": {"name":"voltage_220_2", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"voltage"}},   
+        "source": {"name":"voltage_220_2", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":2, "mode":"voltage"}},   
  
     },    
     {
         "id": "metric19",
-        "title": "Ток ~ 2",
+        "title": "ИБП2 вход. ток",
         "type": "current AC",
         "unit": "A",
         "defaultVal": "--",
         "normal_level": "8",      // норма
-        "warning_criterion": ">",    // критерий: ">", "<", "=", "!=", "%", ""         
+        "warning_criterion": "",    // критерий: ">", "<", "=", "!=", "%", ""         
         "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
-        "alarm_criterion": ">",      // критерий: ">", "<", "=", "!=", "%", ""        
+        "alarm_criterion": "",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка      
-        "source": {"name":"current_220_2", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"current"}},           
+        "source": {"name":"current_220_2", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":2, "mode":"current"}},           
     },    
     {
         "id": "metric20",
-        "title": "Частота ~ 2",
+        "title": "ИБП2 вход. част.",
         "type": "frequency",
         "unit": "Гц",
         "defaultVal": "--",
@@ -297,12 +298,12 @@
         "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка    
-        "source": {"name":"frequency_220_2", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"frequency"}},    
+        "source": {"name":"frequency_220_2", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":2, "mode":"frequency"}},    
 
     },      
     {
         "id": "metric21",
-        "title": "Напряжение ~ 3",
+        "title": "ИБП1 вых. напр.",
         "type": "voltage AC",
         "unit": "В",
         "defaultVal": "--",
@@ -311,12 +312,12 @@
         "warning_threshold": "10",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "20",    // число (% отклонения от нормы), значение или пустая строка         
-        "source": {"name":"voltage_220_3", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"voltage"}},   
+        "source": {"name":"voltage_220_3", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":3, "mode":"voltage"}},   
          
     },    
     {
         "id": "metric22",
-        "title": "Ток ~ 3",
+        "title": "ИБП1 вых. ток",
         "type": "current AC",
         "unit": "A",
         "defaultVal": "--",
@@ -325,11 +326,11 @@
         "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": ">",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка         
-        "source": {"name":"current_220_3", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"current"}}, 
+        "source": {"name":"current_220_3", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":3, "mode":"current"}}, 
     },
     {
         "id": "metric23",
-        "title": "Частота ~ 3",
+        "title": "ИБП1 вых. част.",
         "type": "frequency",
         "unit": "Гц",
         "defaultVal": "--",
@@ -338,12 +339,12 @@
         "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка         
-        "source": {"name":"frequency_220_3", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"frequency"}}, 
+        "source": {"name":"frequency_220_3", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":3, "mode":"frequency"}}, 
 
     },      
     {
         "id": "metric24",
-        "title": "Напряжение ~ 4",
+        "title": "ИБП2 вых. напр.",
         "type": "voltage AC",
         "unit": "В",
         "defaultVal": "--",
@@ -352,12 +353,12 @@
         "warning_threshold": "10",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "20",    // число (% отклонения от нормы), значение или пустая строка        
-        "source": {"name":"voltage_220_1", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"voltage"}},    
+        "source": {"name":"voltage_220_4", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":4, "mode":"voltage"}},    
 
     },    
     {
         "id": "metric25",
-        "title": "Ток ~ 4",
+        "title": "ИБП2 вых. ток",
         "type": "current AC",
         "unit": "A",
         "defaultVal": "--",
@@ -366,11 +367,11 @@
         "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": ">",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка         
-        "source": {"name":"current_220_4", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"current"}}, 
+        "source": {"name":"current_220_4", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":4, "mode":"current"}}, 
     },
     {
         "id": "metric26",
-        "title": "Частота ~ 4",
+        "title": "ИБП2 вых. част.",
         "type": "frequency",
         "unit": "Гц",
         "defaultVal": "--",
@@ -379,7 +380,7 @@
         "warning_threshold": "1",  // число (% отклонения от нормы), значение или пустая строка 
         "alarm_criterion": "%",      // критерий: ">", "<", "=", "!=", "%", ""        
         "alarm_threshold": "2",    // число (% отклонения от нормы), значение или пустая строка         
-        "source": {"name":"frequency_220_4", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":1, "mode":"frequency"}}, 
+        "source": {"name":"frequency_220_4", "type": "ddsu666", "params":{"port": "port_1", "baudrate": 9600, "slave_address":4, "mode":"frequency"}},
 
     }            
 
